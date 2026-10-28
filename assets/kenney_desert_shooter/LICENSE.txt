@@ -1,0 +1,12 @@
+Desert Shooter Pack — Kenney
+
+License: Creative Commons Zero 1.0 Universal (CC0 1.0)
+https://creativecommons.org/publicdomain/zero/1.0/
+
+The official Desert Shooter Pack page identifies these 2D assets as CC0:
+https://kenney.nl/assets/desert-shooter-pack
+
+Downloaded sprite files are selected from the Kenney CC0 asset mirror:
+https://github.com/shorepine/kenney/tree/main/2d/Desert%20Shooter%20Pack
+
+Attribution is not required. Optional credit: "Game assets by Kenney (kenney.nl)".
