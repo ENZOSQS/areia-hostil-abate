@@ -20,7 +20,6 @@ func _physics_process(_delta: float) -> void:
 		direction.y -= 1.0
 	if Input.is_key_pressed(KEY_S) or Input.is_key_pressed(KEY_DOWN):
 		direction.y += 1.0
-	if direction.length_squared() > 0.0:
-		$Sprite2D.rotation = direction.angle() - PI * 0.5
+		
 	velocity = direction.normalized() * speed
 	move_and_slide()

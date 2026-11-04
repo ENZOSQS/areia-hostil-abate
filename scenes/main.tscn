@@ -1,22 +1,227 @@
-[gd_scene format=3 uid="uid://cmwb50o3q2bu2"]
+[gd_scene load_steps=10 format=4 uid="uid://cmwb50o3q2bu2"]
 
-[ext_resource type="Texture2D" uid="uid://bqdghk60cp45q" path="res://assets/kenney_desert_shooter/tiles/cactus_1.png" id="cactus_a"]
+[ext_resource type="Texture2D" uid="uid://do6b1cxcgm52k" path="res://assets/kenney_desert_shooter/tiles/pixellab-quero-obstaculos-de-bioma-de-d-1793230205254.png" id="2_jyhfs"]
+[ext_resource type="Texture2D" uid="uid://dst3edmvdjdt3" path="res://assets/kenney_desert_shooter/tiles/Mapa Pixelizado do Deserto com Oásis.png" id="3_jyhfs"]
 [ext_resource type="Texture2D" uid="uid://c4eocbt187s7s" path="res://assets/kenney_desert_shooter/tiles/cactus_2.png" id="cactus_b"]
-[ext_resource type="PackedScene" path="res://entities/player.tscn" id="player"]
-[ext_resource type="Texture2D" uid="uid://covia6hg3b5mu" path="res://assets/kenney_desert_shooter/tiles/rock_1.png" id="rock_a"]
-[ext_resource type="Texture2D" uid="uid://d0jbilhyj4cfj" path="res://assets/kenney_desert_shooter/tiles/rock_2.png" id="rock_b"]
-[ext_resource type="Texture2D" uid="uid://btahkqhik70xf" path="res://assets/kenney_desert_shooter/tiles/sand_base.png" id="sand_base"]
-[ext_resource type="Texture2D" uid="uid://bp2y58ptyc1it" path="res://assets/kenney_desert_shooter/tiles/sand_detail.png" id="sand_detail"]
-[ext_resource type="Texture2D" uid="uid://b3qdcuq8u1akv" path="res://assets/kenney_desert_shooter/tiles/tree.png" id="tree"]
+[ext_resource type="PackedScene" uid="uid://cv4v66uxvp2i7" path="res://entities/player.tscn" id="player"]
 
-[sub_resource type="RectangleShape2D" id="TreeCollision"]
-size = Vector2(7, 25)
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jyhfs"]
+texture = ExtResource("cactus_b")
+0:0/0 = 0
 
-[sub_resource type="RectangleShape2D" id="RockCollision"]
-size = Vector2(26, 20)
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tbgi4"]
+texture = ExtResource("2_jyhfs")
+14:0/0 = 0
+15:0/0 = 0
+14:1/0 = 0
+15:1/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+15:2/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+12:3/0 = 0
+13:3/0 = 0
+14:3/0 = 0
+15:3/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+14:6/0 = 0
+15:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+14:7/0 = 0
+15:7/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+11:8/0 = 0
+12:8/0 = 0
+13:8/0 = 0
+14:8/0 = 0
+15:8/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+8:9/0 = 0
+9:9/0 = 0
+10:9/0 = 0
+11:9/0 = 0
+12:9/0 = 0
+13:9/0 = 0
+14:9/0 = 0
+15:9/0 = 0
+2:11/0 = 0
+3:11/0 = 0
+0:12/0 = 0
+1:12/0 = 0
+2:12/0 = 0
+3:12/0 = 0
+4:12/0 = 0
+5:12/0 = 0
+6:12/0 = 0
+7:12/0 = 0
+12:12/0 = 0
+13:12/0 = 0
+14:12/0 = 0
+15:12/0 = 0
+0:13/0 = 0
+1:13/0 = 0
+2:13/0 = 0
+3:13/0 = 0
+4:13/0 = 0
+5:13/0 = 0
+6:13/0 = 0
+7:13/0 = 0
+12:13/0 = 0
+13:13/0 = 0
+14:13/0 = 0
+15:13/0 = 0
+0:14/0 = 0
+1:14/0 = 0
+2:14/0 = 0
+3:14/0 = 0
+6:14/0 = 0
+7:14/0 = 0
+8:14/0 = 0
+9:14/0 = 0
+10:14/0 = 0
+11:14/0 = 0
+0:15/0 = 0
+1:15/0 = 0
+2:15/0 = 0
+3:15/0 = 0
+6:15/0 = 0
+7:15/0 = 0
+8:15/0 = 0
+9:15/0 = 0
+10:15/0 = 0
+11:15/0 = 0
+8:4/size_in_atlas = Vector2i(2, 2)
+8:4/0 = 0
+8:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-10.9714, -8.63322, -3.23746, -5.93534, 1.07915, -8, 2.51802, -12.2304, 8, -5.2159, 9.89223, -1.79859, 12.4103, 5.57562, 10.6117, 12.2304, -0.359718, 8, -2.51802, 12.2304, -7.55407, 12.2304, -12.2304, 7.01449, -9.72368, -1.64884)
+0:0/size_in_atlas = Vector2i(2, 2)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-10.2519, -6.1152, -4.67633, -5.75548, -3.77703, -13.3095, 1.61873, -12.9498, 4.31661, -8, 10.4318, -7.91378, 10.2519, 7.73393, 3.41732, 8, 7.55407, 12.4103, -7.19435, 12.9498, -4.31661, 5.39576, -10.4318, 3.0576)
+12:0/size_in_atlas = Vector2i(2, 2)
+12:0/0 = 0
+12:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-1.25901, -10.9714, 3.0576, -12.4103, 4.67633, -1.79859, 10.4318, 0.719435, 7.37421, 15.1081, -6.47491, 14.5686, -10.4318, 5.75548, -8, -1.61873, -2.69788, -3.0576)
+0:4/size_in_atlas = Vector2i(2, 2)
+0:4/next_alternative_id = 2
+0:4/0 = 0
+0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-5.03605, -11.511, 4.49647, -14.029, 8, -6.29505, 13.1297, 3.95689, 12.9498, 8.81308, 10.0721, 12.4103, -4.31661, 12.4103, -11.1512, 12.0505, -12.9498, 3.59718)
+0:4/1 = 1
+4:6/size_in_atlas = Vector2i(2, 2)
+4:6/0 = 0
+0:8/size_in_atlas = Vector2i(4, 2)
+0:8/0 = 0
+0:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-28.6768, -12.7452, -18.4806, -13.7011, -4.1422, 2.86768, 16.5688, 1.27452, 22.3042, -3.18631, 29.9513, -4.1422, 29.314, 12.7452, -28.9954, 12.108)
+4:8/size_in_atlas = Vector2i(2, 2)
+4:8/0 = 0
+4:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-12.1132, -13.9566, -1.05333, -13.9566, 0.526663, 1.05333, 13.6932, 0.789993, 12.3766, 13.1666, -11.8499, 14.2199)
+10:10/size_in_atlas = Vector2i(2, 2)
+10:10/0 = 0
+10:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-5.65836, 2.82918, -8, 1.95866, 1.5234, 1.95866, 5.2231, 0.870518, 7.01449, 13.6693, -7.91378, 13.8491)
+12:10/size_in_atlas = Vector2i(2, 2)
+12:10/0 = 0
+12:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-13.1297, -12.4103, -2.33816, -13.1297, -0.539576, -3.59717, 14.2088, 0.719435, 12.77, 13.1297, -14.2088, 12.0505)
+4:14/size_in_atlas = Vector2i(2, 2)
+4:14/0 = 0
+4:14/0/physics_layer_0/polygon_0/points = PackedVector2Array(-14.029, 1.07915, -3.95689, -8, 4.67633, -8, 14.9283, 2.15831, 11.8707, 11.6908, -1.07915, 13.8491, -12.5901, 11.1512)
+12:14/size_in_atlas = Vector2i(2, 2)
+12:14/0 = 0
+12:14/0/physics_layer_0/polygon_0/points = PackedVector2Array(-14.2088, -9.17279, 4.67633, -8, 14.2088, -4.85618, 11.6908, 10.9714, -13.1297, 8.63322)
+14:14/size_in_atlas = Vector2i(2, 2)
+14:14/0 = 0
+14:14/0/physics_layer_0/polygon_0/points = PackedVector2Array(-12.9498, -7.01449, -8, -8, 13.1297, -7.37421, 13.8491, -1.25901, 11.6908, 8.99294, 7.37421, 10.0721, -6.47491, 8, -13.3095, 7.73393, -14.7484, -1.61873)
+8:10/size_in_atlas = Vector2i(2, 2)
+8:10/0 = 0
+8:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 2.10665, -5.00329, 2.36998, 0.26333, 3.15998, 8, 1.84332, 7.01449, 14.029, -7.01449, 14.2088)
+0:2/size_in_atlas = Vector2i(2, 2)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2.51802, -15.4678, 8, -8, 9.89223, -0.359716, 8, 8, 4.49647, 13.3095, -0.359718, 13.8491, -8, 8, -10.4318, 5.75548, -9.71237, -7.19435)
+6:2/size_in_atlas = Vector2i(2, 2)
+6:2/0 = 0
+6:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3.23746, -10.7915, 8, -8, 9.89223, 0.719435, 8, 8, 5.39576, 13.4894, -4.49647, 13.4894, -8, 8, -10.2519, 1.43887, -8, -3.0576)
+12:6/size_in_atlas = Vector2i(2, 2)
+12:6/0 = 0
+12:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -1.07915, -10.6117, 8, -8, 13.3095, 0, 12.77, 8.81308, 3.95689, 13.3095, -10.6117, 12.4103, -13.8491, 6.83463, -10.2519, -1.79859)
+0:10/size_in_atlas = Vector2i(2, 2)
+0:10/0 = 0
+0:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-13.8491, -11.3311, -3.23746, -9.71237, 14.9283, 1.07915, 13.8491, 12.2304, -13.8491, 12.2304)
+14:10/size_in_atlas = Vector2i(2, 2)
+14:10/0 = 0
+14:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-10.2519, -7.73392, -0.719435, -2.51802, 5.03605, -8, 10.7915, -10.2519, 12.77, 11.6908, 1.79859, 13.3095, -14.5686, 11.1512, -13.6693, 1.97845)
+6:4/size_in_atlas = Vector2i(2, 2)
+6:4/0 = 0
+6:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -3.69969, -13.0577, 1.61873, -12.4103, 5.44073, -12.6225, 8, -6.52887, 12.4049, -0.435257, 13.493, 12.4049, 8.92279, 13.2754, 2.61155, 11.3167, -8.2699, 14.5811, -15.4517, 10.4462)
+10:12/size_in_atlas = Vector2i(2, 2)
+10:12/0 = 0
+10:12/0/physics_layer_0/polygon_0/points = PackedVector2Array(-12.77, -7.91378, 13.6693, -6.83463, 13.6693, 10.2519, -5.03605, 9.71237, -14.029, 9.1728, -13.6693, 8.63322)
+4:10/size_in_atlas = Vector2i(2, 2)
+4:10/0 = 0
+4:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4.73996, -0.26333, 2.10665, 1.57999, 3.15998, 1.05333, 6.05662, 14.2199, -7.37327, 13.1666, -5.26662, 2.63331)
+6:10/size_in_atlas = Vector2i(2, 2)
+6:10/0 = 0
+6:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-5.52995, 3.68664, -1.05333, 2.10665, 4.2133, 2.36998, 7.73392, 13.4894, -7.37421, 12.4103)
+8:12/size_in_atlas = Vector2i(2, 2)
+8:12/0 = 0
+8:12/0/physics_layer_0/polygon_0/points = PackedVector2Array(-10.6117, -5.75548, 7.37421, -12.5901, 13.1297, -3.23746, 12.4103, 6.65477, 9.89223, 11.511, -13.4894, 12.77)
+12:4/size_in_atlas = Vector2i(2, 2)
+12:4/0 = 0
+12:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-12.77, -5.2159, 3.23746, -13.3095, 11.6908, -7.55407, 13.6693, 3.41732, 10.0721, 10.0721, -11.3311, 10.9714)
+14:4/size_in_atlas = Vector2i(2, 2)
+14:4/0 = 0
+14:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-10.4318, -9.71237, 10.0721, -11.3311, 15.288, -1.07915, 10.2519, 5.57562, 5.75548, 12.2304, -11.1512, 10.2519, -15.1081, -1.07915)
+2:2/size_in_atlas = Vector2i(2, 2)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -2.69788, -10.7915, 0.539576, -8, 5.03605, -12.5901, 8, -8, 12.2304, -0.719435, 5.57562, 3.0576, 5.2159, 13.6693, -0.359718, 14.2088, -4.67633, 10.7915, -6.47491, 4.13675, -10.0721, 1.97845, -13.3095, -5.93534)
+4:4/size_in_atlas = Vector2i(2, 2)
+4:4/0 = 0
+4:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-1.25901, -14.7484, 8.81308, -10.4318, 11.1512, -2.33816, 14.5686, 8.99294, 12.5901, 12.0505, 6.29506, 13.3095, -3.59717, 10.2519, -14.3887, 11.1512, -8.63322, -10.7915)
+6:0/size_in_atlas = Vector2i(2, 2)
+6:0/0 = 0
+6:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9.1728, -9.35265, 0.719435, -13.6693, 9.35265, -8.81308, 8, -0.359716, 5.75548, 4.67633, 8, 8, 4.85619, 14.5686, 0, 16.0074, -5.57562, 13.8491, -8, 8, -4.49647, 3.23746, -8, -0.719435)
+8:2/size_in_atlas = Vector2i(2, 2)
+8:2/0 = 0
+8:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -2.1583, -12.4103, 5.03605, -12.2304, 10.9714, -9.71237, 13.6693, 12.9498, -14.5686, 13.3095, -12.5901, 2.15831)
 
-[sub_resource type="RectangleShape2D" id="CactusCollision"]
-size = Vector2(24, 20)
+[sub_resource type="TileSet" id="TileSet_tefeu"]
+physics_layer_0/collision_layer = 1
+sources/1 = SubResource("TileSetAtlasSource_jyhfs")
+sources/4 = SubResource("TileSetAtlasSource_tbgi4")
 
 [sub_resource type="RectangleShape2D" id="WallHorizontal"]
 size = Vector2(1280, 28)
@@ -24,590 +229,64 @@ size = Vector2(1280, 28)
 [sub_resource type="RectangleShape2D" id="WallVertical"]
 size = Vector2(28, 720)
 
-[node name="Main" type="Node2D" unique_id=1605325316]
+[node name="Main" type="Node2D"]
 texture_filter = 1
 
-[node name="Ground" type="Node2D" parent="." unique_id=464234179]
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+z_index = 1
+tile_map_data = PackedByteArray("AADn/w8ABAAAAAAAAADn/xAABAAAAAEAAADo/w8ABAABAAAAAADo/xAABAABAAEAAAAEAAwABAAAAAAAAAAEAA0ABAAAAAEAAAAFAAwABAABAAAAAAAFAA0ABAABAAEAAADs/wUABAAAAAAAAADs/wYABAAAAAEAAADt/wUABAABAAAAAADt/wYABAABAAEAAAAVAPj/BAAAAAAAAAAVAPn/BAAAAAEAAAAWAPj/BAABAAAAAAAWAPn/BAABAAEAAAARAAMABAAEAAQAAAARAAQABAAEAAUAAAASAAMABAAFAAQAAAASAAQABAAFAAUAAADu//n/BAAEAAQAAADu//r/BAAEAAUAAADv//n/BAAFAAQAAADv//r/BAAFAAUAAAD6//z/BAAAAAQAAAD6//3/BAAAAAUAAAD7//z/BAABAAQAAAD7//3/BAABAAUAAAALAPf/BAAAAAQAAAALAPj/BAAAAAUAAAAMAPf/BAABAAQAAAAMAPj/BAABAAUAAAATAPn/BAAIAAQAAAATAPr/BAAIAAUAAAAUAPn/BAAJAAQAAAAUAPr/BAAJAAUAAAARAPn/BAAMAAQAAAARAPr/BAAMAAUAAAASAPn/BAANAAQAAAASAPr/BAANAAUAAADa/wUABAAAAAAAAADa/wcABAAAAAAAAADk//7/BAAAAAAAAADs/w0ABAAAAAAAAADt//f/BAAAAAAAAAD0/+7/BAAAAAAAAAD6/wQABAAAAAAAAAACAPz/BAAAAAAAAAAGAO7/BAAAAAAAAAAGAPD/BAAAAAAAAAAHABMABAAAAAAAAAASAAwABAAAAAAAAADd/wEABAAMAAAAAADg/wkABAAMAAAAAADl/woABAAMAAAAAADv/wAABAAMAAAAAADx//L/BAAMAAAAAADz/+7/BAAMAAAAAAD0//v/BAAMAAAAAAD3//H/BAAMAAAAAAACAPL/BAAMAAAAAAAFAPb/BAAAAAQAAAAMAA4ABAAMAAAAAAANAAkABAAMAAAAAAAOAAgABAAMAAAAAAAOABMABAAMAAAAAAAPAAwABAAMAAAAAAARAPT/BAAMAAAAAAARAAsABAAMAAAAAAAbAO7/BAAMAAAAAAAcAP3/BAAMAAAAAAAdABAABAAMAAAAAAAiAPr/BAAMAAAAAAAiABEABAAMAAAAAAAjAP//BAAMAAAAAADp//n/BAAAAAQAAAD1/wMABAAAAAQAAAD+//z/BAAAAAQAAAAUAPP/BAAAAAQAAAAYAPH/BAAAAAQAAAAcAAoABAAAAAQAAAAlAAIABAAAAAQAAADy/wkABAAEAAYAABAAAA0ABAAEAAYAABAbAA0ABAAEAAYAABD1//b/BAAEAAYAABDg/+7/BAAEAAYAABDc//z/BAAGAAYAAADc//3/BAAGAAcAAADd//z/BAAHAAYAAADd//3/BAAHAAcAAAAbAOv/BAAGAAYAAAAbAOz/BAAGAAcAAAAcAOv/BAAHAAYAAAAcAOz/BAAHAAcAAADp/xEABAAAAAgAAADs/xAABAAEAAgAAADy/w4ABAAIAAoAAADv/w4ABAAKAAoAAADx/xMABAAMAAoAAADx/woABAAKAAwAAAD1/xIABAAMAA4AAAAbABAABAAIAAQAAAAbABIABAAGAAIAAAA=")
+tile_set = SubResource("TileSet_tefeu")
 
-[node name="SandBase" type="Sprite2D" parent="Ground" unique_id=1343704759]
-texture_filter = 1
-scale = Vector2(80, 45)
-texture = ExtResource("sand_base")
-
-[node name="SandDetails" type="Node2D" parent="Ground" unique_id=537743359]
-
-[node name="SandDetail001" type="Sprite2D" parent="Ground/SandDetails" unique_id=2011503026]
-texture_filter = 1
-position = Vector2(250, 188)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail002" type="Sprite2D" parent="Ground/SandDetails" unique_id=1068767387]
-texture_filter = 1
-position = Vector2(448, 29)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail003" type="Sprite2D" parent="Ground/SandDetails" unique_id=805276847]
-texture_filter = 1
-position = Vector2(-472, 154)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail004" type="Sprite2D" parent="Ground/SandDetails" unique_id=89366267]
-texture_filter = 1
-position = Vector2(-272, 279)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail005" type="Sprite2D" parent="Ground/SandDetails" unique_id=292691164]
-texture_filter = 1
-position = Vector2(-349, 85)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail006" type="Sprite2D" parent="Ground/SandDetails" unique_id=715307570]
-texture_filter = 1
-position = Vector2(-443, -180)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail007" type="Sprite2D" parent="Ground/SandDetails" unique_id=1690467145]
-texture_filter = 1
-position = Vector2(186, -142)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail008" type="Sprite2D" parent="Ground/SandDetails" unique_id=1752495809]
-texture_filter = 1
-position = Vector2(-549, -124)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail009" type="Sprite2D" parent="Ground/SandDetails" unique_id=1723398712]
-texture_filter = 1
-position = Vector2(-70, 90)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail010" type="Sprite2D" parent="Ground/SandDetails" unique_id=1795078149]
-texture_filter = 1
-position = Vector2(141, 188)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail011" type="Sprite2D" parent="Ground/SandDetails" unique_id=1081376517]
-texture_filter = 1
-position = Vector2(63, -4)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail012" type="Sprite2D" parent="Ground/SandDetails" unique_id=510542452]
-texture_filter = 1
-position = Vector2(576, -106)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail013" type="Sprite2D" parent="Ground/SandDetails" unique_id=2006484613]
-texture_filter = 1
-position = Vector2(-391, -267)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail014" type="Sprite2D" parent="Ground/SandDetails" unique_id=1415200822]
-texture_filter = 1
-position = Vector2(282, -207)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail015" type="Sprite2D" parent="Ground/SandDetails" unique_id=2067849393]
-texture_filter = 1
-position = Vector2(313, -96)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail016" type="Sprite2D" parent="Ground/SandDetails" unique_id=32962655]
-texture_filter = 1
-position = Vector2(-461, 49)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail017" type="Sprite2D" parent="Ground/SandDetails" unique_id=1988003685]
-texture_filter = 1
-position = Vector2(-372, 242)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail018" type="Sprite2D" parent="Ground/SandDetails" unique_id=1469013510]
-texture_filter = 1
-position = Vector2(-184, 25)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail019" type="Sprite2D" parent="Ground/SandDetails" unique_id=1306486536]
-texture_filter = 1
-position = Vector2(416, 312)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail020" type="Sprite2D" parent="Ground/SandDetails" unique_id=1901230512]
-texture_filter = 1
-position = Vector2(-61, -94)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail021" type="Sprite2D" parent="Ground/SandDetails" unique_id=1769832520]
-texture_filter = 1
-position = Vector2(-280, -25)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail022" type="Sprite2D" parent="Ground/SandDetails" unique_id=464682935]
-texture_filter = 1
-position = Vector2(-480, -49)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail023" type="Sprite2D" parent="Ground/SandDetails" unique_id=919980287]
-texture_filter = 1
-position = Vector2(340, 188)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail024" type="Sprite2D" parent="Ground/SandDetails" unique_id=403936053]
-texture_filter = 1
-position = Vector2(-338, -4)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail025" type="Sprite2D" parent="Ground/SandDetails" unique_id=897404805]
-texture_filter = 1
-position = Vector2(-301, 213)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail026" type="Sprite2D" parent="Ground/SandDetails" unique_id=996313859]
-texture_filter = 1
-position = Vector2(-228, -14)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail027" type="Sprite2D" parent="Ground/SandDetails" unique_id=1124959842]
-texture_filter = 1
-position = Vector2(349, 15)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail028" type="Sprite2D" parent="Ground/SandDetails" unique_id=229589207]
-texture_filter = 1
-position = Vector2(467, -148)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail029" type="Sprite2D" parent="Ground/SandDetails" unique_id=742684995]
-texture_filter = 1
-position = Vector2(-388, -318)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail030" type="Sprite2D" parent="Ground/SandDetails" unique_id=1553330615]
-texture_filter = 1
-position = Vector2(-107, -123)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail031" type="Sprite2D" parent="Ground/SandDetails" unique_id=125437334]
-texture_filter = 1
-position = Vector2(-312, -308)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail032" type="Sprite2D" parent="Ground/SandDetails" unique_id=1432136297]
-texture_filter = 1
-position = Vector2(110, 186)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail033" type="Sprite2D" parent="Ground/SandDetails" unique_id=2128178669]
-texture_filter = 1
-position = Vector2(-30, 111)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail034" type="Sprite2D" parent="Ground/SandDetails" unique_id=1989854096]
-texture_filter = 1
-position = Vector2(584, 159)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail035" type="Sprite2D" parent="Ground/SandDetails" unique_id=1368677745]
-texture_filter = 1
-position = Vector2(174, 255)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail036" type="Sprite2D" parent="Ground/SandDetails" unique_id=176605065]
-texture_filter = 1
-position = Vector2(-342, 30)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail037" type="Sprite2D" parent="Ground/SandDetails" unique_id=1788457900]
-texture_filter = 1
-position = Vector2(-367, -156)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail038" type="Sprite2D" parent="Ground/SandDetails" unique_id=1471795837]
-texture_filter = 1
-position = Vector2(-204, -112)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail039" type="Sprite2D" parent="Ground/SandDetails" unique_id=1326185236]
-texture_filter = 1
-position = Vector2(185, 224)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail040" type="Sprite2D" parent="Ground/SandDetails" unique_id=1572903424]
-texture_filter = 1
-position = Vector2(599, -21)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail041" type="Sprite2D" parent="Ground/SandDetails" unique_id=651195028]
-texture_filter = 1
-position = Vector2(-183, -192)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail042" type="Sprite2D" parent="Ground/SandDetails" unique_id=1689397464]
-texture_filter = 1
-position = Vector2(154, -174)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail043" type="Sprite2D" parent="Ground/SandDetails" unique_id=1755209543]
-texture_filter = 1
-position = Vector2(-382, -303)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail044" type="Sprite2D" parent="Ground/SandDetails" unique_id=626308587]
-texture_filter = 1
-position = Vector2(218, -262)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail045" type="Sprite2D" parent="Ground/SandDetails" unique_id=1581160749]
-texture_filter = 1
-position = Vector2(-285, 167)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail046" type="Sprite2D" parent="Ground/SandDetails" unique_id=1065471592]
-texture_filter = 1
-position = Vector2(133, -76)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail047" type="Sprite2D" parent="Ground/SandDetails" unique_id=636247846]
-texture_filter = 1
-position = Vector2(82, -264)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail048" type="Sprite2D" parent="Ground/SandDetails" unique_id=1681844765]
-texture_filter = 1
-position = Vector2(-260, -192)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail049" type="Sprite2D" parent="Ground/SandDetails" unique_id=973609661]
-texture_filter = 1
-position = Vector2(-554, 129)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail050" type="Sprite2D" parent="Ground/SandDetails" unique_id=1675094425]
-texture_filter = 1
-position = Vector2(437, 293)
-texture = ExtResource("sand_detail")
+[node name="Ground" type="Node2D" parent="."]
 
-[node name="SandDetail051" type="Sprite2D" parent="Ground/SandDetails" unique_id=1400477047]
+[node name="SandBase" type="Sprite2D" parent="Ground"]
 texture_filter = 1
-position = Vector2(319, 306)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail052" type="Sprite2D" parent="Ground/SandDetails" unique_id=165890504]
-texture_filter = 1
-position = Vector2(-143, 101)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail053" type="Sprite2D" parent="Ground/SandDetails" unique_id=214945970]
-texture_filter = 1
-position = Vector2(-547, 264)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail054" type="Sprite2D" parent="Ground/SandDetails" unique_id=158990842]
-texture_filter = 1
-position = Vector2(154, -245)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail055" type="Sprite2D" parent="Ground/SandDetails" unique_id=952168147]
-texture_filter = 1
-position = Vector2(185, 73)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail056" type="Sprite2D" parent="Ground/SandDetails" unique_id=1456628119]
-texture_filter = 1
-position = Vector2(559, 67)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail057" type="Sprite2D" parent="Ground/SandDetails" unique_id=1892710677]
-texture_filter = 1
-position = Vector2(-26, 99)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail058" type="Sprite2D" parent="Ground/SandDetails" unique_id=1863935405]
-texture_filter = 1
-position = Vector2(-342, -155)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail059" type="Sprite2D" parent="Ground/SandDetails" unique_id=1007345284]
-texture_filter = 1
-position = Vector2(-148, 5)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail060" type="Sprite2D" parent="Ground/SandDetails" unique_id=862840537]
-texture_filter = 1
-position = Vector2(434, -315)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail061" type="Sprite2D" parent="Ground/SandDetails" unique_id=930030050]
-texture_filter = 1
-position = Vector2(596, 187)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail062" type="Sprite2D" parent="Ground/SandDetails" unique_id=1657811485]
-texture_filter = 1
-position = Vector2(554, -161)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail063" type="Sprite2D" parent="Ground/SandDetails" unique_id=1326845125]
-texture_filter = 1
-position = Vector2(302, 292)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail064" type="Sprite2D" parent="Ground/SandDetails" unique_id=1656777031]
-texture_filter = 1
-position = Vector2(288, 4)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail065" type="Sprite2D" parent="Ground/SandDetails" unique_id=1428236351]
-texture_filter = 1
-position = Vector2(-128, 109)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail066" type="Sprite2D" parent="Ground/SandDetails" unique_id=1347932798]
-texture_filter = 1
-position = Vector2(250, -147)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail067" type="Sprite2D" parent="Ground/SandDetails" unique_id=210689324]
-texture_filter = 1
-position = Vector2(271, -229)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail068" type="Sprite2D" parent="Ground/SandDetails" unique_id=1751676922]
-texture_filter = 1
-position = Vector2(171, -51)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail069" type="Sprite2D" parent="Ground/SandDetails" unique_id=1524985478]
-texture_filter = 1
-position = Vector2(-132, 302)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail070" type="Sprite2D" parent="Ground/SandDetails" unique_id=831821069]
-texture_filter = 1
-position = Vector2(530, 218)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail071" type="Sprite2D" parent="Ground/SandDetails" unique_id=1133034191]
-texture_filter = 1
-position = Vector2(521, -186)
-texture = ExtResource("sand_detail")
-
-[node name="SandDetail072" type="Sprite2D" parent="Ground/SandDetails" unique_id=1445813945]
-texture_filter = 1
-position = Vector2(-483, -103)
-texture = ExtResource("sand_detail")
-
-[node name="SandTrail" type="Line2D" parent="Ground" unique_id=1770114914]
-texture_filter = 1
-points = PackedVector2Array(-640, -70, -430, -35, -220, -75, 20, -42, 230, -82, 430, -48, 640, -72)
-width = 88.0
-default_color = Color(0.721569, 0.545098, 0.329412, 1)
-
-[node name="SandTrailHighlight" type="Line2D" parent="Ground" unique_id=1082670085]
-points = PackedVector2Array(-640, -70, -430, -35, -220, -75, 20, -42, 230, -82, 430, -48, 640, -72)
-width = 2.0
-default_color = Color(0.88, 0.72, 0.49, 0.38)
-
-[node name="Obstacles" type="Node2D" parent="." unique_id=1885762327]
-
-[node name="TreeNorthWest" type="StaticBody2D" parent="Obstacles" unique_id=1576653830]
-position = Vector2(-520, -250)
-
-[node name="Sprite2D" type="Sprite2D" parent="Obstacles/TreeNorthWest" unique_id=698678364]
-texture_filter = 1
-scale = Vector2(4, 4)
-texture = ExtResource("tree")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacles/TreeNorthWest" unique_id=547013071]
-position = Vector2(0, 19)
-shape = SubResource("TreeCollision")
-
-[node name="TreeEast" type="StaticBody2D" parent="Obstacles" unique_id=1263128519]
-position = Vector2(520, 120)
-
-[node name="Sprite2D" type="Sprite2D" parent="Obstacles/TreeEast" unique_id=810068761]
-texture_filter = 1
-scale = Vector2(4, 4)
-texture = ExtResource("tree")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacles/TreeEast" unique_id=376206403]
-position = Vector2(-3, 0)
-shape = SubResource("TreeCollision")
-
-[node name="TreeSouth" type="StaticBody2D" parent="Obstacles" unique_id=2099184415]
-position = Vector2(-20, 280)
-
-[node name="Sprite2D" type="Sprite2D" parent="Obstacles/TreeSouth" unique_id=1339056061]
-texture_filter = 1
-scale = Vector2(4, 4)
-texture = ExtResource("tree")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacles/TreeSouth" unique_id=1988874238]
-position = Vector2(-2.5, 0)
-shape = SubResource("TreeCollision")
-
-[node name="RockNorthWest" type="StaticBody2D" parent="Obstacles" unique_id=229768906]
-position = Vector2(-390, -180)
-
-[node name="Sprite2D" type="Sprite2D" parent="Obstacles/RockNorthWest" unique_id=958616979]
-texture_filter = 1
-scale = Vector2(3, 3)
-texture = ExtResource("rock_a")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacles/RockNorthWest" unique_id=1793996716]
-shape = SubResource("RockCollision")
-
-[node name="RockNorth" type="StaticBody2D" parent="Obstacles" unique_id=527255766]
-position = Vector2(-40, -250)
-
-[node name="Sprite2D" type="Sprite2D" parent="Obstacles/RockNorth" unique_id=42615692]
-texture_filter = 1
-scale = Vector2(3, 3)
-texture = ExtResource("rock_b")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacles/RockNorth" unique_id=106079639]
-shape = SubResource("RockCollision")
-
-[node name="RockEast" type="StaticBody2D" parent="Obstacles" unique_id=1342980231]
-position = Vector2(430, -190)
-
-[node name="Sprite2D" type="Sprite2D" parent="Obstacles/RockEast" unique_id=1477405252]
-texture_filter = 1
-scale = Vector2(3, 3)
-texture = ExtResource("rock_a")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacles/RockEast" unique_id=1452307001]
-shape = SubResource("RockCollision")
-
-[node name="RockWestSouth" type="StaticBody2D" parent="Obstacles" unique_id=921475852]
-position = Vector2(-440, 170)
-
-[node name="Sprite2D" type="Sprite2D" parent="Obstacles/RockWestSouth" unique_id=28248289]
-texture_filter = 1
-scale = Vector2(3, 3)
-texture = ExtResource("rock_b")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacles/RockWestSouth" unique_id=847634787]
-shape = SubResource("RockCollision")
-
-[node name="RockSouth" type="StaticBody2D" parent="Obstacles" unique_id=1227181228]
-position = Vector2(30, 190)
-
-[node name="Sprite2D" type="Sprite2D" parent="Obstacles/RockSouth" unique_id=790829308]
-texture_filter = 1
-scale = Vector2(3, 3)
-texture = ExtResource("rock_a")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacles/RockSouth" unique_id=546473763]
-shape = SubResource("RockCollision")
-
-[node name="RockSouthEast" type="StaticBody2D" parent="Obstacles" unique_id=1453638291]
-position = Vector2(370, 250)
-
-[node name="Sprite2D" type="Sprite2D" parent="Obstacles/RockSouthEast" unique_id=1589172065]
-texture_filter = 1
-scale = Vector2(3, 3)
-texture = ExtResource("rock_b")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacles/RockSouthEast" unique_id=991935515]
-shape = SubResource("RockCollision")
-
-[node name="CactusWest" type="StaticBody2D" parent="Obstacles" unique_id=477824863]
-position = Vector2(-190, -40)
-
-[node name="Sprite2D" type="Sprite2D" parent="Obstacles/CactusWest" unique_id=2057411053]
-texture_filter = 1
-scale = Vector2(3, 3)
-texture = ExtResource("cactus_a")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacles/CactusWest" unique_id=1211921276]
-shape = SubResource("CactusCollision")
-
-[node name="CactusNorthEast" type="StaticBody2D" parent="Obstacles" unique_id=1592676402]
-position = Vector2(230, -250)
-
-[node name="Sprite2D" type="Sprite2D" parent="Obstacles/CactusNorthEast" unique_id=359025104]
-texture_filter = 1
-scale = Vector2(3, 3)
-texture = ExtResource("cactus_b")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacles/CactusNorthEast" unique_id=538671883]
-shape = SubResource("CactusCollision")
-
-[node name="CactusEast" type="StaticBody2D" parent="Obstacles" unique_id=2006376309]
-position = Vector2(300, 60)
-
-[node name="Sprite2D" type="Sprite2D" parent="Obstacles/CactusEast" unique_id=404349806]
-texture_filter = 1
-scale = Vector2(3, 3)
-texture = ExtResource("cactus_a")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacles/CactusEast" unique_id=1086700669]
-shape = SubResource("CactusCollision")
-
-[node name="CactusSouthWest" type="StaticBody2D" parent="Obstacles" unique_id=1308192612]
-position = Vector2(-230, 280)
-
-[node name="Sprite2D" type="Sprite2D" parent="Obstacles/CactusSouthWest" unique_id=14602781]
-texture_filter = 1
-scale = Vector2(3, 3)
-texture = ExtResource("cactus_b")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacles/CactusSouthWest" unique_id=1209898537]
-shape = SubResource("CactusCollision")
-
-[node name="CactusSouth" type="StaticBody2D" parent="Obstacles" unique_id=1638473435]
-position = Vector2(180, 160)
-
-[node name="Sprite2D" type="Sprite2D" parent="Obstacles/CactusSouth" unique_id=357912495]
-texture_filter = 1
-scale = Vector2(3, 3)
-texture = ExtResource("cactus_a")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacles/CactusSouth" unique_id=1088382331]
-shape = SubResource("CactusCollision")
+position = Vector2(6.5, 5.00002)
+scale = Vector2(0.810547, 0.669922)
+texture = ExtResource("3_jyhfs")
 
-[node name="Boundaries" type="Node2D" parent="." unique_id=2005970621]
+[node name="Boundaries" type="Node2D" parent="."]
 
-[node name="NorthVisual" type="Polygon2D" parent="Boundaries" unique_id=724264092]
+[node name="NorthVisual" type="Polygon2D" parent="Boundaries"]
 color = Color(0.396078, 0.313726, 0.235294, 1)
 polygon = PackedVector2Array(-640, -360, 640, -360, 640, -334, -640, -334)
 
-[node name="SouthVisual" type="Polygon2D" parent="Boundaries" unique_id=485657464]
+[node name="SouthVisual" type="Polygon2D" parent="Boundaries"]
 color = Color(0.396078, 0.313726, 0.235294, 1)
 polygon = PackedVector2Array(-640, 334, 640, 334, 640, 360, -640, 360)
 
-[node name="WestVisual" type="Polygon2D" parent="Boundaries" unique_id=1368658256]
+[node name="WestVisual" type="Polygon2D" parent="Boundaries"]
 color = Color(0.396078, 0.313726, 0.235294, 1)
 polygon = PackedVector2Array(-640, -360, -614, -360, -614, 360, -640, 360)
 
-[node name="EastVisual" type="Polygon2D" parent="Boundaries" unique_id=1232439300]
+[node name="EastVisual" type="Polygon2D" parent="Boundaries"]
 color = Color(0.396078, 0.313726, 0.235294, 1)
 polygon = PackedVector2Array(614, -360, 640, -360, 640, 360, 614, 360)
 
-[node name="WallTop" type="StaticBody2D" parent="Boundaries" unique_id=106917926]
+[node name="WallTop" type="StaticBody2D" parent="Boundaries"]
 position = Vector2(0, -346)
 
-[node name="Shape" type="CollisionShape2D" parent="Boundaries/WallTop" unique_id=1682051627]
+[node name="Shape" type="CollisionShape2D" parent="Boundaries/WallTop"]
 shape = SubResource("WallHorizontal")
 
-[node name="WallBottom" type="StaticBody2D" parent="Boundaries" unique_id=1017916037]
+[node name="WallBottom" type="StaticBody2D" parent="Boundaries"]
 position = Vector2(0, 346)
 
-[node name="Shape" type="CollisionShape2D" parent="Boundaries/WallBottom" unique_id=1976409445]
+[node name="Shape" type="CollisionShape2D" parent="Boundaries/WallBottom"]
 shape = SubResource("WallHorizontal")
 
-[node name="WallLeft" type="StaticBody2D" parent="Boundaries" unique_id=2070533783]
+[node name="WallLeft" type="StaticBody2D" parent="Boundaries"]
 position = Vector2(-626, 0)
 
-[node name="Shape" type="CollisionShape2D" parent="Boundaries/WallLeft" unique_id=1518512882]
+[node name="Shape" type="CollisionShape2D" parent="Boundaries/WallLeft"]
 shape = SubResource("WallVertical")
 
-[node name="WallRight" type="StaticBody2D" parent="Boundaries" unique_id=722298780]
+[node name="WallRight" type="StaticBody2D" parent="Boundaries"]
 position = Vector2(626, 0)
 
-[node name="Shape" type="CollisionShape2D" parent="Boundaries/WallRight" unique_id=456830621]
+[node name="Shape" type="CollisionShape2D" parent="Boundaries/WallRight"]
 shape = SubResource("WallVertical")
 
-[node name="Player" parent="." unique_id=425844077 instance=ExtResource("player")]
+[node name="Player" parent="." instance=ExtResource("player")]
 
 [editable path="Player"]
