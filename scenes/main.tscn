@@ -1,9 +1,12 @@
-[gd_scene load_steps=10 format=4 uid="uid://cmwb50o3q2bu2"]
+[gd_scene load_steps=13 format=4 uid="uid://cmwb50o3q2bu2"]
 
 [ext_resource type="Texture2D" uid="uid://do6b1cxcgm52k" path="res://assets/kenney_desert_shooter/tiles/pixellab-quero-obstaculos-de-bioma-de-d-1793230205254.png" id="2_jyhfs"]
 [ext_resource type="Texture2D" uid="uid://dst3edmvdjdt3" path="res://assets/kenney_desert_shooter/tiles/Mapa Pixelizado do Deserto com Oásis.png" id="3_jyhfs"]
 [ext_resource type="Texture2D" uid="uid://c4eocbt187s7s" path="res://assets/kenney_desert_shooter/tiles/cactus_2.png" id="cactus_b"]
 [ext_resource type="PackedScene" uid="uid://cv4v66uxvp2i7" path="res://entities/player.tscn" id="player"]
+[ext_resource type="PackedScene" path="res://scenes/hud.tscn" id="hud"]
+[ext_resource type="Script" path="res://scripts/main.gd" id="main_script"]
+[ext_resource type="PackedScene" path="res://entities/scorpion.tscn" id="scorpion"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jyhfs"]
 texture = ExtResource("cactus_b")
@@ -231,6 +234,7 @@ size = Vector2(28, 720)
 
 [node name="Main" type="Node2D"]
 texture_filter = 1
+script = ExtResource("main_script")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 z_index = 1
@@ -289,4 +293,11 @@ shape = SubResource("WallVertical")
 
 [node name="Player" parent="." instance=ExtResource("player")]
 
+[node name="ScorpionPreview" parent="." instance=ExtResource("scorpion")]
+position = Vector2(310, 0)
+
+[node name="HUD" parent="." instance=ExtResource("hud")]
+
 [editable path="Player"]
+
+
