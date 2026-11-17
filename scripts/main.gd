@@ -1,9 +1,13 @@
+# Origem: implementação desenvolvida com auxílio do OpenAI Codex.
 extends Node2D
 
 const ScorpionScene := preload("res://entities/scorpion.tscn")
 const ProjectileScene := preload("res://entities/projectile.tscn")
 const PickupScene := preload("res://entities/health_pickup.tscn")
 const HudScript := preload("res://scripts/hud.gd")
+
+const EDGE_SPAWN_X := 590.0
+const EDGE_SPAWN_Y := 320.0
 
 enum SessionState { PLAYING, VICTORY, GAME_OVER }
 
@@ -46,20 +50,33 @@ func _process(delta: float) -> void:
 
 func _spawn_scorpion() -> void:
 	var enemy := ScorpionScene.instantiate() as SandScorpion
-	var angle := rng.randf_range(0.0, TAU)
-	var radius := rng.randf_range(330.0, 420.0)
-	var spawn_position := player.global_position + Vector2.from_angle(angle) * radius
-	spawn_position.x = clampf(spawn_position.x, -590.0, 590.0)
-	spawn_position.y = clampf(spawn_position.y, -320.0, 320.0)
-	if spawn_position.distance_to(player.global_position) < 200.0:
-		spawn_position = player.global_position + (player.global_position - spawn_position).normalized() * 240.0
-		spawn_position.x = clampf(spawn_position.x, -590.0, 590.0)
-		spawn_position.y = clampf(spawn_position.y, -320.0, 320.0)
+	var spawn_position := _random_perimeter_position()
+	for attempt in range(8):
+		if spawn_position.distance_to(player.global_position) >= 220.0:
+			break
+		spawn_position = _random_perimeter_position()
 	enemy.global_position = spawn_position
 	enemy.target = player
 	enemy.player_contact.connect(player.take_damage)
 	enemy.defeated.connect(_on_scorpion_defeated)
 	add_child(enemy)
+
+
+func _random_perimeter_position() -> Vector2:
+	# Sorteia ao longo do perímetro, ponderando os lados pelo comprimento.
+	var horizontal_length := EDGE_SPAWN_X * 2.0
+	var vertical_length := EDGE_SPAWN_Y * 2.0
+	var distance := rng.randf_range(0.0, 2.0 * horizontal_length + 2.0 * vertical_length)
+	if distance < horizontal_length:
+		return Vector2(-EDGE_SPAWN_X + distance, -EDGE_SPAWN_Y)
+	distance -= horizontal_length
+	if distance < vertical_length:
+		return Vector2(EDGE_SPAWN_X, -EDGE_SPAWN_Y + distance)
+	distance -= vertical_length
+	if distance < horizontal_length:
+		return Vector2(EDGE_SPAWN_X - distance, EDGE_SPAWN_Y)
+	distance -= horizontal_length
+	return Vector2(-EDGE_SPAWN_X, EDGE_SPAWN_Y - distance)
 
 
 func _spawn_projectile(origin: Vector2, direction: Vector2) -> void:
@@ -107,4 +124,4 @@ func _alive_enemy_count() -> int:
 
 
 func _enemy_limit() -> int:
-	return mini(10, 3 + kills / 8)
+	return mini(10, 3 + kills / 5)

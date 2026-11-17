@@ -1,3 +1,4 @@
+# Origem: implementação desenvolvida com auxílio do OpenAI Codex.
 extends Area2D
 class_name SandProjectile
 

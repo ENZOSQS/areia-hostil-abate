@@ -24,10 +24,14 @@ O projeto contém a arena editável no Godot, explorador animado em quatro dire�
 - `scripts/`: lógica e máquinas de estado do jogo.
 - `assets/custom/`: sprites pixel art e ícones feitos para o projeto.
 
-## Origem
+## Créditos e uso de IA
 
-O código desta etapa foi feito com assistência de IA (OpenAI Codex), identificada por comentário nos scripts. Os sprites externos estão identificados e licenciados em `assets/kenney_desert_shooter/LICENSE.txt`.
+Os scripts de gameplay e o teste automatizado foram desenvolvidos com auxílio do OpenAI Codex; cada arquivo GDScript identifica essa origem no comentário inicial. O projeto foi revisado e testado no Godot pelo responsável.
 
-## Sprites do deserto
+O explorador, o escorpião, o mapa do oásis e a folha de obstáculos são criações geradas para este jogo no PixelLab Creator, conforme registrado no `DEVLOG.md`. Os termos do PixelLab dizem que o usuário mantém os direitos autorais de suas criações e vinculam o uso à licença Open RAIL-M. Consulte [termos do PixelLab](https://www.pixellab.ai/termsofservice) e [Open RAIL-M](https://www.licenses.ai/ai-pubs-open-railm).
 
-O projeto inclui sprites selecionados do **Desert Shooter Pack**, de Kenney, para areia, árvores, cactos, pedras e personagem. O mapa foi montado na cena com nós posicionados e ajustáveis no editor; nenhum script instancia ou desenha os objetos do cenário. O pacote é CC0. A licença e os links da fonte estão em `assets/kenney_desert_shooter/LICENSE.txt`.
+Os recursos selecionados do **Desert Shooter Pack**, de Kenney, estão licenciados em CC0; a licença e as fontes estão em `assets/kenney_desert_shooter/LICENSE.txt`. Os nomes das pastas antigas não alteram a origem indicada para cada arquivo em `assets/custom/ORIGEM.md`.
+
+## Captura de tela
+
+![Captura do jogo rodando no Godot, com a arena inteira visível](screenshots/gameplay.png)

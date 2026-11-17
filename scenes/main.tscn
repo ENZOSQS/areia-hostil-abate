@@ -250,6 +250,11 @@ position = Vector2(6.5, 5.00002)
 scale = Vector2(0.810547, 0.669922)
 texture = ExtResource("3_jyhfs")
 
+[node name="ArenaCamera" type="Camera2D" parent="."]
+position = Vector2(0, 0)
+zoom = Vector2(1, 1)
+enabled = true
+
 [node name="OasisWaterBlocker" type="StaticBody2D" parent="."]
 position = Vector2(320, -45)
 collision_layer = 1

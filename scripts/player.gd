@@ -1,3 +1,4 @@
+# Origem: implementação desenvolvida com auxílio do OpenAI Codex.
 extends CharacterBody2D
 class_name ArenaPlayer
 
@@ -22,13 +23,11 @@ var _attack_anim_timer := 0.0
 var _invulnerable_timer := 0.0
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
-@onready var camera: Camera2D = $Camera2D
 
 
 func _ready() -> void:
 	health = max_health
 	add_to_group("player")
-	camera.make_current()
 	health_changed.emit(health, max_health)
 	_update_animation()
 

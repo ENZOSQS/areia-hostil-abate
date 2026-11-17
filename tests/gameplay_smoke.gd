@@ -1,3 +1,4 @@
+# Origem: teste desenvolvido com auxílio do OpenAI Codex.
 extends Node
 
 const MainScene := preload("res://scenes/main.tscn")
@@ -17,6 +18,23 @@ func _run() -> void:
 	add_child(game)
 	await get_tree().process_frame
 	var player := game.get_node("Player")
+	var arena_camera: Camera2D = game.get_node("ArenaCamera")
+	_check(arena_camera.zoom == Vector2.ONE, "Arena camera frames the complete 1280 by 720 play area")
+	_check(arena_camera.global_position == Vector2.ZERO, "Arena camera stays centered instead of following the player")
+	game.rng.seed = 184701
+	var edge_mask := 0
+	var every_spawn_is_on_the_perimeter := true
+	for _sample in range(128):
+		var spawn: Vector2 = game._random_perimeter_position()
+		var on_top := is_equal_approx(spawn.y, -game.EDGE_SPAWN_Y)
+		var on_right := is_equal_approx(spawn.x, game.EDGE_SPAWN_X)
+		var on_bottom := is_equal_approx(spawn.y, game.EDGE_SPAWN_Y)
+		var on_left := is_equal_approx(spawn.x, -game.EDGE_SPAWN_X)
+		if not (on_top or on_right or on_bottom or on_left):
+			every_spawn_is_on_the_perimeter = false
+		edge_mask |= (1 if on_top else 0) | (2 if on_right else 0) | (4 if on_bottom else 0) | (8 if on_left else 0)
+	_check(every_spawn_is_on_the_perimeter, "Scorpion spawn positions stay on the arena perimeter")
+	_check(edge_mask == 15, "Scorpions can spawn along all four arena edges")
 	_check(player.health == player.max_health, "Player starts at full health")
 	_check(player.state == 0, "Player starts idle")
 	_check(player.sprite.animation == "idle_down", "Player starts with the downward idle animation")
@@ -68,6 +86,21 @@ func _run() -> void:
 	_check(enemy.state == 4, "Scorpion reaches dead state at zero health")
 	_check(game.kills == 1, "Three player shots award one scorpion defeat")
 
+	game.kills = 35
+	game.spawn_timer = 999.0
+	_check(game._enemy_limit() == 10, "Horde reaches ten living scorpions before the 50-kill victory")
+	var horde_start_usec := Time.get_ticks_usec()
+	for index in range(10):
+		var horde_member := ScorpionScene.instantiate() as SandScorpion
+		horde_member.target = player
+		horde_member.global_position = Vector2(-590.0 + float(index) * 130.0, -320.0)
+		game.add_child(horde_member)
+	for _frame in range(60):
+		await get_tree().process_frame
+	var horde_elapsed_ms := float(Time.get_ticks_usec() - horde_start_usec) / 1000.0
+	_check(game._alive_enemy_count() == 10, "Ten living scorpions stay active during the horde load pass")
+	print("Horde load smoke: 10 scorpions processed for 60 frames in %.1f ms." % horde_elapsed_ms)
+
 	var projectile := ProjectileScene.instantiate()
 	game.add_child(projectile)
 	var shot_sprite: Sprite2D = projectile.get_node("Sprite2D")
@@ -95,7 +128,7 @@ func _run() -> void:
 	_check(game.session_state == 2, "Player defeat enters the game over state")
 
 	if failures.is_empty():
-		print("Gameplay smoke checks passed: directional animation, water blocker, projectile art and hits, kill target, pickup and end states.")
+		print("Gameplay smoke checks passed: fixed full-arena camera, four-edge spawning, 10-enemy load, directional animation, water blocker, projectile art and hits, kill target, pickup and end states.")
 	else:
 		for failure in failures:
 			push_error("Gameplay check failed: " + failure)

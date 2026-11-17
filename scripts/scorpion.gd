@@ -1,3 +1,4 @@
+# Origem: implementação desenvolvida com auxílio do OpenAI Codex.
 extends CharacterBody2D
 class_name SandScorpion
 
