@@ -8,9 +8,21 @@ Jogo 2D de arena vista de cima, criado por Enzo Rafael para Jogos Digitais II.
 - Tipo: Abate — vencer ao derrotar 50 inimigos.
 - Modo: horda em arena vista de cima.
 
-## Etapas
+## Como jogar
 
-Este repositório está sendo construído em incrementos. A **Etapa 1** contém o projeto Godot, o mapa do deserto e o explorador jogável com movimento em quatro direções, colisão e câmera. Inimigos e regras de combate entram nas etapas posteriores.
+- Mova-se com **WASD** ou as **setas**.
+- Mire com o mouse e segure o **botão esquerdo** ou **Espaço** para disparar.
+- Sobreviva à horda e derrote **50 escorpiões**. Kits médicos podem restaurar vida.
+- Ao terminar, use **R** ou o botão na tela para reiniciar.
+
+O projeto contém a arena editável no Godot, explorador animado em quatro direções, escorpiões com estados de movimento e dano, dardos de areia incandescente, itens de cura, horda progressiva, HUD e finais de vitória e derrota. As animações do explorador são montadas em oito sequências de quatro quadros no recurso SpriteFrames da cena, para edição no painel de animações do Godot.
+
+## Organização
+
+- `scenes/main.tscn`: mapa e arena editáveis.
+- `entities/`: cenas independentes do jogador, inimigos, projéteis e itens.
+- `scripts/`: lógica e máquinas de estado do jogo.
+- `assets/custom/`: sprites pixel art e ícones feitos para o projeto.
 
 ## Origem
 

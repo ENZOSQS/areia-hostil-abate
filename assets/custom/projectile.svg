@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="12" viewBox="0 0 18 12" shape-rendering="crispEdges">
+  <!-- Dardo de areia incandescente, apontado para a direita -->
+  <path fill="#63351f" d="M0 5h3V4h3V3h3V2h4v1h2v2h2v2h-2v2h-2v1H9V9H6V8H3V7H0z"/>
+  <path fill="#c66b2d" d="M2 5h4V4h3V3h4v1h2v1h1v2h-1v1h-2v1H9V8H6V7H2z"/>
+  <path fill="#f2ad43" d="M6 5h3V4h4v1h2v2h-2v1H9V7H6z"/>
+  <path fill="#ffe69a" d="M11 5h3v2h-3zM8 5h2v1H8z"/>
+  <path fill="#fff8d8" d="M14 5h1v2h-1z"/>
+  <path fill="#9a5128" d="M0 5h2v2H0zM3 4h2v1H3z"/>
+</svg>

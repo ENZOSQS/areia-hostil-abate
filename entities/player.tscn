@@ -1,133 +1,28 @@
-[gd_scene format=3 uid="uid://cv4v66uxvp2i7"]
+[gd_scene load_steps=4 format=3 uid="uid://cv4v66uxvp2i7"]
 
 [ext_resource type="Script" uid="uid://dry1wbg5m2qd0" path="res://scripts/player.gd" id="1_player"]
-[ext_resource type="Texture2D" uid="uid://06k3dufhbb0x" path="res://assets/kenney_desert_shooter/tiles/player_walk_4dir.png" id="2_b0kkn"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tjdhl"]
-atlas = ExtResource("2_b0kkn")
-region = Rect2(0, 192, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_x08pd"]
-atlas = ExtResource("2_b0kkn")
-region = Rect2(64, 192, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_dchgp"]
-atlas = ExtResource("2_b0kkn")
-region = Rect2(128, 192, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_kdgjc"]
-atlas = ExtResource("2_b0kkn")
-region = Rect2(192, 192, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_b0kkn"]
-atlas = ExtResource("2_b0kkn")
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_e4p34"]
-atlas = ExtResource("2_b0kkn")
-region = Rect2(64, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_rfe5m"]
-atlas = ExtResource("2_b0kkn")
-region = Rect2(128, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_qly61"]
-atlas = ExtResource("2_b0kkn")
-region = Rect2(192, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_qsoyl"]
-atlas = ExtResource("2_b0kkn")
-region = Rect2(0, 64, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6nm46"]
-atlas = ExtResource("2_b0kkn")
-region = Rect2(128, 64, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_i623q"]
-atlas = ExtResource("2_b0kkn")
-region = Rect2(64, 64, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ef06p"]
-atlas = ExtResource("2_b0kkn")
-region = Rect2(192, 64, 64, 64)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_r66jo"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tjdhl")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_x08pd")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_dchgp")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_kdgjc")
-}],
-"loop": 1,
-"name": &"walk_up",
-"speed": 8.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_b0kkn")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_e4p34")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_rfe5m")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qly61")
-}],
-"loop": 1,
-"name": &"walk_down",
-"speed": 8.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qsoyl")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6nm46")
-}],
-"loop": 1,
-"name": &"walk_left",
-"speed": 8.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_i623q")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ef06p")
-}],
-"loop": 1,
-"name": &"walk_right",
-"speed": 8.0
-}]
+[ext_resource type="SpriteFrames" path="res://assets/custom/explorer_states.tres" id="2_animations"]
 
 [sub_resource type="CircleShape2D" id="PlayerCollision"]
 radius = 11.0
 
-[node name="Player" type="CharacterBody2D" unique_id=1094224063]
+[node name="Player" type="CharacterBody2D"]
 collision_layer = 2
+collision_mask = 5
 script = ExtResource("1_player")
 
-[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=2026791198]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-scale = Vector2(0.5, 0.5)
-sprite_frames = SubResource("SpriteFrames_r66jo")
-animation = &"walk_left"
+position = Vector2(0, -1)
+scale = Vector2(0.2, 0.2)
+sprite_frames = ExtResource("2_animations")
+animation = &"idle_down"
+autoplay = "idle_down"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=484971321]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("PlayerCollision")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=767067855]
-zoom = Vector2(2.2, 2.2)
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
 position_smoothing_enabled = true
 position_smoothing_speed = 7.0
-
