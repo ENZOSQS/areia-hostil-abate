@@ -17,6 +17,10 @@ Jogo 2D de arena vista de cima, criado por Enzo Rafael para Jogos Digitais II.
 
 O projeto contém a arena editável no Godot, explorador animado em quatro direções, escorpiões com estados de movimento e dano, dardos de areia incandescente, itens de cura, horda progressiva, HUD e finais de vitória e derrota. As animações do explorador são montadas em oito sequências de quatro quadros no recurso SpriteFrames da cena, para edição no painel de animações do Godot.
 
+## Jogar no navegador
+
+[Abrir Areia Hostil: Abate](https://enzosqs.github.io/areia-hostil-abate/)
+
 ## Organização
 
 - `scenes/main.tscn`: mapa e arena editáveis.

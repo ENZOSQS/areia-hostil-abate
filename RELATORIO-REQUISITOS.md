@@ -1,14 +1,14 @@
 # Relatório de requisitos — Areia Hostil: Abate
 
-**Revisão:** 17/11/2026
+**Revisão:** 18/11/2026
 
-**Projeto revisado:** base `a9813ba` (`main`, sincronizado com `origin/main`) e alterações locais descritas em `PLANO-ACAO-COMPLETAMENTO.md`
+**Projeto revisado:** ramo `main`, com build Web publicado em GitHub Pages.
 
 **Documento de referência:** `E:/NOVO OPERA/projeto (1).pdf`, “Projeto do segundo semestre”, Jogos Digitais II, Aula 08, 5 páginas.
 
 ## Resultado geral
 
-**O núcleo do jogo e a exportação Web local estão implementados e executam no navegador.** A exportação e os recursos do pacote foram conferidos por HTTP, e o navegador renderizou a arena com HUD e cronômetro ativo. Publicação, entrega no Classroom e apresentação ainda estão pendentes. As alterações deste complemento estão no commit `fbfe5d5`.
+**O núcleo do jogo está implementado e publicado para navegador.** A exportação e os recursos foram conferidos por HTTP; a página do GitHub Pages renderizou a arena com HUD e cronômetro ativo. Entrega no Classroom e apresentação ainda estão pendentes. O repositório foi tornado público para a publicação.
 
 Este documento é uma auditoria: não altera as regras do jogo. Itens “não verificáveis” dependem da carta sorteada, do Classroom ou da apresentação, que não estão incluídos no material examinado.
 
@@ -22,15 +22,15 @@ Este documento é uma auditoria: não altera as regras do jogo. Itens “não ve
 | Aula 09: vida, dano, ataque, objetivo, vitória e derrota | Atendido | `scripts/player.gd`, `scripts/projectile.gd`, `scripts/main.gd` e `scripts/hud.gd` implementam vida, dano, disparo, contador de 50 abates e estados finais. O teste `tests/gameplay_smoke.tscn` cobre combate e finais. |
 | Aula 10: inimigo com máquina de estados e contorno de obstáculos | Atendido | `scripts/scorpion.gd` declara estados e testa direções alternativas para contornar colisões. O projeto também tem bloqueios físicos no cenário. |
 | Aula 11: arte do tema e horda completa sem travar | Parcial | Há sprites temáticos e limite de 10 inimigos vivos. Smoke test processou 10 por 60 frames em 400,7 ms headless; isso é uma checagem de carga básica, não prova desempenho em todas as máquinas. |
-| Aula 12: exportado, rodando fora da Godot, com página publicada | Parcial | Preset e pacote Web existem em `build/web/`; HTML, JS, WASM e PCK responderam HTTP 200, e o navegador renderizou o jogo com HUD e cronômetro. Ainda não há endereço público; publicação pendente. |
+| Aula 12: exportado, rodando fora da Godot, com página publicada | Atendido | O pacote Web foi publicado em [GitHub Pages](https://enzosqs.github.io/areia-hostil-abate/); a página abriu o jogo e exibiu HUD e cronômetro. |
 | Aula 13: apresentação em sala | Não verificável | O repositório não comprova a apresentação nem se o responsável consegue explicar o código e as decisões. |
 | README com carta, modo, instruções e captura de tela | Parcial | README descreve tema/tipo/modo, controles e captura; a correspondência à carta sorteada não pode ser validada sem a carta individual. |
 | Estrutura organizada em cenas, entidades, scripts e sprites | Atendido | Há `scenes/`, `entities/`, `scripts/` e `assets/` com recursos separados. A pasta de sprites usa `assets/`, em vez do nome literal `sprites/` do exemplo do PDF. |
 | DEVLOG com 3–5 linhas por aula e registro honesto do processo | Parcial | `DEVLOG.md` contém registros e decisões, mas usa seções por etapa/tema, não uma entrada identificável para cada Aula 08–13. Não há cobertura completa e inequívoca do calendário do PDF. |
-| Um commit e uma tag por aula, enviados ao GitHub | Pendente | O histórico tem cinco commits e apenas a tag `etapa-01`. Não existem as tags esperadas `aula-08` a `aula-12`, nem `entrega-final`; os commits não formam um registro por cada encontro indicado no PDF. |
+| Um commit e uma tag por aula, enviados ao GitHub | Pendente | O histórico registra etapas agrupadas, não um estado separado por aula; as tags retroativas `aula-08` a `aula-12` não serão inventadas. A tag `entrega-final` marca esta versão publicada. |
 | Origem do código de IA em comentário de uma linha | Atendido | Scripts de gameplay e teste identificam a assistência do Codex em comentário no próprio arquivo. |
 | Origem e licença da arte de terceiros no README | Atendido | README e `assets/custom/ORIGEM.md` distinguem recursos Kenney CC0, PixelLab gerado e ícones próprios. |
-| Repositório com nome do jogo e link entregue no Classroom com tag `aula-08` | Parcial / não verificável | O repositório GitHub usado tem nome relacionado ao jogo e a tag local/remota disponível é `etapa-01`, não `aula-08`. Não há evidência de envio do link na atividade do Classroom. |
+| Repositório com nome do jogo e link entregue no Classroom com tag `aula-08` | Parcial / não verificável | O repositório tem nome relacionado ao jogo e a versão atual tem tag `entrega-final`; não há evidência de envio do link na atividade do Classroom. |
 
 ## Requisitos do tipo Abate
 
@@ -38,10 +38,9 @@ O PDF define vitória ao derrotar 50 inimigos e derrota quando a vida acaba. O j
 
 ## Itens prioritários para completar a entrega
 
-1. Publicar o pacote Web e registrar o endereço.
-2. Publicar o pacote Web e registrar o endereço quando a hospedagem estiver configurada.
-3. Confirmar a carta sorteada, enviar o link/tag no Classroom e preparar a apresentação explicando código e decisões.
-4. Criar uma tag final na entrega revisada sem retrodatá-la; tags por aula só podem representar snapshots históricos identificáveis.
+1. Enviar o link público e a tag `entrega-final` no Classroom.
+2. Preparar e fazer a apresentação explicando código e decisões.
+3. As tags de aulas anteriores seguem incompletas; estados sem commits separados não serão inventados nem retrodatados.
 
 ## Verificações e limites desta revisão
 

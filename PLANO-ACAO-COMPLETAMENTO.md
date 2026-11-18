@@ -46,14 +46,14 @@
 - [x] Configurar o preset Web e exportar para `build/web/index.html`.
 - [x] Servir localmente e confirmar HTTP 200 para HTML, JavaScript, WASM e PCK.
 - [x] Confirmar execução dentro do navegador: jogo renderizou após o carregamento; tentativa anterior de captura ocorreu cedo demais.
-- [ ] Publicar o build em GitHub Pages e registrar o endereço. GitHub Pages torna o site público; a publicação fica para a etapa final, depois da revisão do build.
+- [x] Publicar o build em GitHub Pages e confirmar que a página carrega o jogo: https://enzosqs.github.io/areia-hostil-abate/.
 
 ## 7. Registrar os incrementos no Git sem alterar datas
 
 - [x] Conferir commits e tags existentes: cinco commits e apenas `etapa-01`.
 - [x] Preservar as datas originais e documentar atrasos no DEVLOG.
 - [x] Não criar tags `aula-09`/`aula-10` apontando para o mesmo commit combinado: isso não mostraria estados separados. Tags retroativas só serão úteis se cada snapshot real da aula puder ser identificado.
-- [ ] Criar a tag de entrega final depois da exportação e do teste final, com a data efetiva do commit.
+- [x] Criar a tag `entrega-final` na versão publicada, com a data efetiva do commit.
 
 ## 8. Entrega acadêmica e apresentação
 

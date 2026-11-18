@@ -30,7 +30,7 @@ As datas abaixo distinguem o prazo de cada aula da data real que aparece no hist
 
 - O que entrou em 17/11: template Web oficial do Godot 4.7.1 instalado, preset Web sem threads configurado e release exportado para `build/web/`.
 - Verificação: servidor local respondeu HTTP 200 para HTML, JavaScript, WASM e PCK; depois do carregamento, o navegador renderizou a arena, a HUD e o cronômetro ativo.
-- Situação em 18/11: execução local no navegador confirmada; publicação pública ainda pendente.
+- Situação em 18/11: execução e publicação no GitHub Pages confirmadas em https://enzosqs.github.io/areia-hostil-abate/.
 
 ## Aula 13 — apresentação — prazo 18/11
 
