@@ -36,7 +36,7 @@
 - [x] Executar `tests/gameplay_smoke.tscn` após as alterações e verificar o resultado.
 - [x] Inicializar o projeto headless sem erros de script.
 - [x] Gerar pacote Web de release em `build/web/`.
-- [ ] Confirmar a execução dentro de navegador: os recursos carregam por HTTP, mas o navegador headless permaneceu na tela de carregamento da engine.
+- [x] Confirmar execução dentro do navegador: jogo carregado e renderizado, HUD visível e cronômetro ativo via servidor local.
 - [x] Medir a horda no limite de 10 inimigos vivos: 60 frames processados em 400,7 ms no smoke test headless.
 
 ## 6. Exportar e publicar
@@ -45,7 +45,7 @@
 - [x] Instalar somente o template Web correspondente ao Godot 4.7.1, após conferir o hash oficial.
 - [x] Configurar o preset Web e exportar para `build/web/index.html`.
 - [x] Servir localmente e confirmar HTTP 200 para HTML, JavaScript, WASM e PCK.
-- [ ] Confirmar a execução dentro do navegador; a tela capturada ficou no carregamento da engine.
+- [x] Confirmar execução dentro do navegador: jogo renderizou após o carregamento; tentativa anterior de captura ocorreu cedo demais.
 - [ ] Publicar o build em GitHub Pages e registrar o endereço. GitHub Pages torna o site público; a publicação fica para a etapa final, depois da revisão do build.
 
 ## 7. Registrar os incrementos no Git sem alterar datas

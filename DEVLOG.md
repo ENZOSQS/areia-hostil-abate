@@ -29,8 +29,8 @@ As datas abaixo distinguem o prazo de cada aula da data real que aparece no hist
 ## Aula 12 — exportação Web e publicação — prazo 11/11
 
 - O que entrou em 17/11: template Web oficial do Godot 4.7.1 instalado, preset Web sem threads configurado e release exportado para `build/web/`.
-- Verificação: servidor local respondeu HTTP 200 para HTML, JavaScript, WASM e PCK; a captura headless do navegador permaneceu na tela de carregamento, então a execução visual no navegador não foi confirmada.
-- Situação em 17/11: build local concluído; publicação pública ainda pendente.
+- Verificação: servidor local respondeu HTTP 200 para HTML, JavaScript, WASM e PCK; depois do carregamento, o navegador renderizou a arena, a HUD e o cronômetro ativo.
+- Situação em 18/11: execução local no navegador confirmada; publicação pública ainda pendente.
 
 ## Aula 13 — apresentação — prazo 18/11
 

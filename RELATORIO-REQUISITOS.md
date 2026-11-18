@@ -8,7 +8,7 @@
 
 ## Resultado geral
 
-**O núcleo do jogo e a exportação Web local estão implementados.** A exportação e os recursos do pacote foram conferidos por HTTP, embora a execução visual em navegador permaneça sem confirmação. Publicação, entrega no Classroom, carta individual e apresentação ainda dependem de validação/ação no ambiente acadêmico. As alterações deste complemento ainda estão locais e não fazem parte do commit `a9813ba`.
+**O núcleo do jogo e a exportação Web local estão implementados e executam no navegador.** A exportação e os recursos do pacote foram conferidos por HTTP, e o navegador renderizou a arena com HUD e cronômetro ativo. Publicação, entrega no Classroom e apresentação ainda estão pendentes. As alterações deste complemento estão no commit `fbfe5d5`.
 
 Este documento é uma auditoria: não altera as regras do jogo. Itens “não verificáveis” dependem da carta sorteada, do Classroom ou da apresentação, que não estão incluídos no material examinado.
 
@@ -22,7 +22,7 @@ Este documento é uma auditoria: não altera as regras do jogo. Itens “não ve
 | Aula 09: vida, dano, ataque, objetivo, vitória e derrota | Atendido | `scripts/player.gd`, `scripts/projectile.gd`, `scripts/main.gd` e `scripts/hud.gd` implementam vida, dano, disparo, contador de 50 abates e estados finais. O teste `tests/gameplay_smoke.tscn` cobre combate e finais. |
 | Aula 10: inimigo com máquina de estados e contorno de obstáculos | Atendido | `scripts/scorpion.gd` declara estados e testa direções alternativas para contornar colisões. O projeto também tem bloqueios físicos no cenário. |
 | Aula 11: arte do tema e horda completa sem travar | Parcial | Há sprites temáticos e limite de 10 inimigos vivos. Smoke test processou 10 por 60 frames em 400,7 ms headless; isso é uma checagem de carga básica, não prova desempenho em todas as máquinas. |
-| Aula 12: exportado, rodando fora da Godot, com página publicada | Parcial | Preset e pacote Web de release existem em `build/web/`; HTML, JS, WASM e PCK responderam HTTP 200. O navegador headless ficou no carregamento da engine e não há endereço público; execução visual/publicação permanecem sem confirmar. |
+| Aula 12: exportado, rodando fora da Godot, com página publicada | Parcial | Preset e pacote Web existem em `build/web/`; HTML, JS, WASM e PCK responderam HTTP 200, e o navegador renderizou o jogo com HUD e cronômetro. Ainda não há endereço público; publicação pendente. |
 | Aula 13: apresentação em sala | Não verificável | O repositório não comprova a apresentação nem se o responsável consegue explicar o código e as decisões. |
 | README com carta, modo, instruções e captura de tela | Parcial | README descreve tema/tipo/modo, controles e captura; a correspondência à carta sorteada não pode ser validada sem a carta individual. |
 | Estrutura organizada em cenas, entidades, scripts e sprites | Atendido | Há `scenes/`, `entities/`, `scripts/` e `assets/` com recursos separados. A pasta de sprites usa `assets/`, em vez do nome literal `sprites/` do exemplo do PDF. |
@@ -38,7 +38,7 @@ O PDF define vitória ao derrotar 50 inimigos e derrota quando a vida acaba. O j
 
 ## Itens prioritários para completar a entrega
 
-1. Confirmar a execução visual do build Web no navegador; o teste de recursos via HTTP passou, mas a captura atual não avançou da tela de carregamento.
+1. Publicar o pacote Web e registrar o endereço.
 2. Publicar o pacote Web e registrar o endereço quando a hospedagem estiver configurada.
 3. Confirmar a carta sorteada, enviar o link/tag no Classroom e preparar a apresentação explicando código e decisões.
 4. Criar uma tag final na entrega revisada sem retrodatá-la; tags por aula só podem representar snapshots históricos identificáveis.
