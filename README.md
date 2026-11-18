@@ -30,7 +30,7 @@ Os scripts de gameplay e o teste automatizado foram desenvolvidos com auxílio d
 
 O explorador, o escorpião, o mapa do oásis e a folha de obstáculos são criações geradas para este jogo no PixelLab Creator, conforme registrado no `DEVLOG.md`. Os termos do PixelLab dizem que o usuário mantém os direitos autorais de suas criações e vinculam o uso à licença Open RAIL-M. Consulte [termos do PixelLab](https://www.pixellab.ai/termsofservice) e [Open RAIL-M](https://www.licenses.ai/ai-pubs-open-railm).
 
-Os recursos selecionados do **Desert Shooter Pack**, de Kenney, estão licenciados em CC0; a licença e as fontes estão em `assets/kenney_desert_shooter/LICENSE.txt`. Os nomes das pastas antigas não alteram a origem indicada para cada arquivo em `assets/custom/ORIGEM.md`.
+O Codex também ajudou a identificar e registrar a origem e a licença dos recursos selecionados do **Desert Shooter Pack**, de Kenney. Essas imagens são do pacote de Kenney, não foram geradas pelo Codex; a licença CC0 e as fontes estão em `assets/kenney_desert_shooter/LICENSE.txt`. Os nomes das pastas antigas não alteram a origem indicada para cada arquivo em `assets/custom/ORIGEM.md`.
 
 ## Captura de tela
 

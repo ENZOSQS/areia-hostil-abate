@@ -19,4 +19,4 @@ Esses SVGs foram desenhados para o projeto com auxílio do OpenAI Codex.
 
 ## Recursos Kenney
 
-Os recursos usados do **Desert Shooter Pack** incluem areia, vegetação, rochas e o explorador base. A licença CC0, a página oficial e a cópia de origem estão registradas em `../kenney_desert_shooter/LICENSE.txt`. Os arquivos gerados pelo PixelLab que ficaram nessa pasta por decisões das etapas anteriores estão listados acima e não são parte do pacote Kenney.
+Os recursos usados do **Desert Shooter Pack** incluem areia, vegetação, rochas e o explorador base. O Codex ajudou a identificar e documentar a origem e a licença desses arquivos; a arte original do pacote é de Kenney, não foi gerada pelo Codex. A licença CC0, a página oficial e a cópia de origem estão registradas em `../kenney_desert_shooter/LICENSE.txt`. Os arquivos gerados pelo PixelLab que ficaram nessa pasta por decisões das etapas anteriores estão listados acima e não são parte do pacote Kenney.
