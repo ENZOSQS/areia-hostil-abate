@@ -30,7 +30,7 @@ O projeto contém a arena editável no Godot, explorador animado em quatro dire�
 
 ## Créditos e uso de IA
 
-Os scripts de gameplay e o teste automatizado foram desenvolvidos com auxílio do OpenAI Codex; cada arquivo GDScript identifica essa origem no comentário inicial. O projeto foi revisado e testado no Godot pelo responsável.
+Os scripts de gameplay e o teste automatizado foram escritos com auxílio do OpenAI Codex, principalmente a máquina de estados do jogador; cada arquivo GDScript identifica essa origem no comentário inicial. O projeto foi revisado e testado no Godot pelo responsável.
 
 O explorador, o escorpião, o mapa do oásis e a folha de obstáculos são criações geradas para este jogo no PixelLab Creator, conforme registrado no `DEVLOG.md`. Os termos do PixelLab dizem que o usuário mantém os direitos autorais de suas criações e vinculam o uso à licença Open RAIL-M. Consulte [termos do PixelLab](https://www.pixellab.ai/termsofservice) e [Open RAIL-M](https://www.licenses.ai/ai-pubs-open-railm).
 

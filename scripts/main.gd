@@ -1,4 +1,5 @@
-# Origem: implementação desenvolvida com auxílio do OpenAI Codex.
+# Partida: surgimento dos escorpiões pela borda, contagem de abates, vitória/derrota e reinício.
+# Origem: escrito com auxílio do OpenAI Codex.
 extends Node2D
 
 const ScorpionScene := preload("res://entities/scorpion.tscn")

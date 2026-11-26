@@ -1,4 +1,5 @@
-# Origem: implementação desenvolvida com auxílio do OpenAI Codex.
+# Dardo: voo em linha reta, dano ao acertar e estados de voo/impacto/expirado.
+# Origem: escrito com auxílio do OpenAI Codex.
 extends Area2D
 class_name SandProjectile
 

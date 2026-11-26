@@ -1,4 +1,5 @@
-# Origem: implementação desenvolvida com auxílio do OpenAI Codex.
+# Explorador: movimento em 4 direções, mira com o mouse, disparo, vida com invulnerabilidade e estados de animação.
+# Origem: escrito com auxílio do OpenAI Codex, principalmente na máquina de estados do jogador.
 extends CharacterBody2D
 class_name ArenaPlayer
 

@@ -1,4 +1,5 @@
-# Origem: implementação desenvolvida com auxílio do OpenAI Codex.
+# Escorpião: máquina de estados (entrando, perseguindo, atacando, ferido, eliminado) e desvio de obstáculos com test_move.
+# Origem: escrito com auxílio do OpenAI Codex.
 extends CharacterBody2D
 class_name SandScorpion
 

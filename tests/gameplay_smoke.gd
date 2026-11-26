@@ -1,4 +1,5 @@
-# Origem: teste desenvolvido com auxílio do OpenAI Codex.
+# Teste de fumaça: confere disparo, cura, contagem de abates, finais de partida e surgimento pela borda.
+# Origem: teste escrito com auxílio do OpenAI Codex.
 extends Node
 
 const MainScene := preload("res://scenes/main.tscn")

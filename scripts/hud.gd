@@ -1,4 +1,5 @@
-# Origem: implementação desenvolvida com auxílio do OpenAI Codex.
+# HUD: barra de vida, contador de abates, cronômetro e tela de vitória/derrota.
+# Origem: escrito com auxílio do OpenAI Codex.
 extends CanvasLayer
 
 signal restart_requested

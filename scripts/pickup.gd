@@ -1,4 +1,5 @@
-# Origem: implementação desenvolvida com auxílio do OpenAI Codex.
+# Kit médico: cura ao ser tocado e some depois de um tempo.
+# Origem: escrito com auxílio do OpenAI Codex.
 extends Area2D
 class_name HealthPickup
 
