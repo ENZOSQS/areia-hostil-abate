@@ -45,3 +45,4 @@ Dia da apresentação em sala.
 - Tirei do repositório meus arquivos de planejamento, o plugin de integração com IA (`addons/godot_mcp_bridge`) e a cena `scenes/hud.tscn`, que não era usada (a HUD é montada pelo `hud.gd`).
 - Tirei uma seção `[input]` repetida do `project.godot`.
 - Criei as tags `aula-08` a `aula-12` apontando para os commits de cada etapa. As datas dos commits continuam as reais, e a mensagem de cada tag diz quando o conteúdo entrou.
+- Exportei o jogo de novo para `docs/` depois da limpeza, para o pacote publicado não levar mais o plugin.
